@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM jorelcb/debian:wheezy
+FROM jorelcb/debian:latest
 
 MAINTAINER Jorge Corredor "jorel.c@gmail.com"
 
