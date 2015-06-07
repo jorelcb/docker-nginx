@@ -5,16 +5,16 @@
 #
 
 # Pull base image.
-FROM jorelcb/debian:latest
+FROM debian:latest
 
 MAINTAINER Jorge Corredor "jorel.c@gmail.com"
 
 # Install Nginx.
 
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
-RUN echo "deb http://nginx.org/packages/mainline/debian/ wheezy nginx" >> /etc/apt/sources.list
+RUN echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list
 
-ENV NGINX_VERSION 1.7.12-1~wheezy
+ENV NGINX_VERSION 1.8.0-1~jessie
 
 # install dialog as ca-certificates prerequisite
 RUN apt-get update && \
