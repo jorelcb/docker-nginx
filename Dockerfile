@@ -9,8 +9,6 @@ FROM debian:jessie
 MAINTAINER "Jorge Corredor" <jorel.c@gmail.com>
 
 # Install Nginx.
-RUN groupadd -r www-data && useradd -r -g www-data www-data
-
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
 RUN echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list
 
