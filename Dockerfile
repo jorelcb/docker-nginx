@@ -14,13 +14,10 @@ RUN echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/source
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# install dialog as ca-certificates prerequisite
+# Nginx Install
 RUN apt-get update && \
 	apt-get install -y \
-	dialog
-
-# Nginx Install
-RUN apt-get install -y \
+	dialog \
     ca-certificates \
     nginx && \
     rm -rf /var/lib/apt/lists/*
